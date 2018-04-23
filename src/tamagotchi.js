@@ -24,7 +24,15 @@ class Tamagotchi {
   }
 
   feed() {
-    this.food += 5;
+    this.food += 20;
+  }
+
+  tickle() {
+    this.attention += 5;
+  }
+
+  sleep() {
+    this.rest += 15;
   }
 
 }//close class

@@ -41,7 +41,7 @@ describe('Tamagotchi', function() {
   it('should increase food level by 20 after feed, attention by 5 after tickle, rest by 15 after sleep', function() {
     tamagotchi2.feed();
     tamagotchi2.tickle();
-    tamagotchi2.rest();
+    tamagotchi2.sleep();
     expect(tamagotchi2.food).toEqual(70);
     expect(tamagotchi2.attention).toEqual(55);
     expect(tamagotchi2.rest).toEqual(65);
