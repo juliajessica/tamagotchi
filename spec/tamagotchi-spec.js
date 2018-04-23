@@ -8,7 +8,6 @@ describe('Tamagotchi', function() {
     tamagotchi = new Tamagotchi(100, 100, 100);
     tamagotchi2 = new Tamagotchi(50, 50, 50);
     jasmine.clock().install();
-    tamagotchi.isAlive();
     tamagotchi.hunger();
     tamagotchi.boredom();
     tamagotchi.fatigue();
@@ -43,14 +42,15 @@ describe('Tamagotchi', function() {
     tamagotchi2.feed();
     tamagotchi2.tickle();
     tamagotchi2.sleep();
-    expect(tamagotchi2.food).toEqual(70);
-    expect(tamagotchi2.attention).toEqual(55);
-    expect(tamagotchi2.rest).toEqual(65);
+    expect(tamagotchi2.food).toEqual(57);
+    expect(tamagotchi2.attention).toEqual(52);
+    expect(tamagotchi2.rest).toEqual(55);
   });
 
   it('should set tamagotchi isAlive to false when food or rest level reach 0', function() {
     jasmine.clock().tick(300001);
-    expect(tamagotchi.isAlive()).toEqual(false);
+    tamagotchi.isAlive();
+    expect(tamagotchi.isAlive).toEqual(false);
   });
 
 });

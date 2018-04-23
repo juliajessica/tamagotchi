@@ -4,17 +4,14 @@ class Tamagotchi {
     this.attention = attention;
     this.rest = rest;
     this.age;
-    this.isAlive;
+    this.status = true;
   }
 
   isAlive() {
-    if (this.rest <= 0 || this.food <= 0) {
-      this.isAlive = false;
-      // clearInterval(this.age());
-      return false;
+    if (this.food <= 0 || this.rest <= 0) {
+      this.status = false;
     } else {
-      this.isAlive = true;
-      return true;
+      this.status = true;
     }
   }
 
@@ -23,27 +20,31 @@ class Tamagotchi {
     setInterval(() => {
       if (this.age <= 2) {
         this.age++;
-      } else {
-        clearInterval();
       }
     }, 30000);
   }
 
   hunger() {
     setInterval(() => {
-      this.food--;
-    }, 3000);
+      if (this.food > 0) {
+        this.food--;
+      }
+    }, 50);
   }
 
   boredom() {
     setInterval(() => {
-      this.attention-=2;
+      if (this.attention > 0) {
+        this.attention-=2;
+      }
     }, 3000);
   }
 
   fatigue() {
     setInterval(() => {
-      this.rest--;
+      if (this.rest > 0) {
+        this.rest--;
+      }
     }, 6000);
   }
 
