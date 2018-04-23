@@ -3,7 +3,7 @@ class Tamagotchi {
     this.food = food;
     this.attention = attention;
     this.rest = rest;
-    // this.isAlive = this.isAlive();
+    this.isAlive = this.isAlive();
   }
 
   isAlive() {
