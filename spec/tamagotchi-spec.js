@@ -7,6 +7,7 @@ describe('Tamagotchi', function() {
     tamagotchi = new Tamagotchi(100, 100, 100);
     jasmine.clock().install();
     tamagotchi.hunger();
+    tamagotchi.boredom();
     tamagotchi.fatigue();
   });
 
@@ -25,9 +26,14 @@ describe('Tamagotchi', function() {
     expect(tamagotchi.food).toEqual(99);
   });
 
+  it('should decrease attention level by 2 after 3001 milliseconds', function() {
+    jasmine.clock().tick(3001);
+    expect(tamagotchi.attention).toEqual(98);
+  });
+
   it('should decrease energy level by 1 after 6001 milliseconds', function() {
     jasmine.clock().tick(6001);
-    expect(tamagotchi.attention).toEqual(99);
+    expect(tamagotchi.rest).toEqual(99);
   });
 
 });
