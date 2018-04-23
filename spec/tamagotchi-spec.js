@@ -6,6 +6,7 @@ describe('Tamagotchi', function() {
   beforeEach(function() {
     tamagotchi = new Tamagotchi(100, 100, 100);
     jasmine.clock().install();
+    tamagotchi.hunger();
   });
 
   afterEach(function() {
@@ -19,8 +20,8 @@ describe('Tamagotchi', function() {
   });
 
   it('should decrease food level by 1 after 3001 milliseconds', function() {
-    jasmine.clock().tick(3001);
-    expect(tamagotchi.food).toEqual(99);
+    jasmine.clock().tick(6001);
+    expect(tamagotchi.food).toEqual(98);
   });
 
 });

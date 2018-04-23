@@ -5,7 +5,11 @@ class Tamagotchi {
     this.rest = rest;
   }
 
-
+  hunger() {
+    setInterval(() => {
+      this.food--;
+    }, 3000);
+  }
 
 }//close class
 
