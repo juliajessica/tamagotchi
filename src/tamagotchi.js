@@ -11,6 +11,14 @@ class Tamagotchi {
     }, 3000);
   }
 
+  fatigue() {
+    setInterval(() => {
+      this.attention--;
+    }, 6000);
+  }
+
+
+
 }//close class
 
 export { Tamagotchi };
