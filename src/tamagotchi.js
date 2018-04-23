@@ -3,6 +3,7 @@ class Tamagotchi {
     this.food = food;
     this.attention = attention;
     this.rest = rest;
+    this.age;
     this.isAlive;
   }
 
@@ -12,6 +13,13 @@ class Tamagotchi {
     } else {
       return true;
     }
+  }
+
+  age() {
+    this.age = 0;
+    setInterval(() => {
+      this.age++;
+    }, 10000);
   }
 
   hunger() {
@@ -33,15 +41,27 @@ class Tamagotchi {
   }
 
   feed() {
-    this.food += 20;
+    if (this.food <= 93) {
+      this.food +=7;
+    } else {
+      this.food = 100;
+    }
   }
 
   tickle() {
-    this.attention += 5;
+    if (this.attention <= 98) {
+      this.attention +=2;
+    } else {
+      this.attention = 100;
+    }
   }
 
   sleep() {
-    this.rest += 15;
+    if (this.rest <= 95) {
+      this.rest += 5;
+    } else {
+      this.rest = 100;
+    }
   }
 
 }//close class
