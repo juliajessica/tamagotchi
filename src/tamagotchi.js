@@ -9,17 +9,24 @@ class Tamagotchi {
 
   isAlive() {
     if (this.rest <= 0 || this.food <= 0) {
+      this.isAlive = false;
+      // clearInterval(this.age());
       return false;
     } else {
+      this.isAlive = true;
       return true;
     }
   }
 
   age() {
-    this.age = 0;
+    this.age = 1;
     setInterval(() => {
-      this.age++;
-    }, 10000);
+      if (this.age <= 2) {
+        this.age++;
+      } else {
+        clearInterval();
+      }
+    }, 30000);
   }
 
   hunger() {

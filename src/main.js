@@ -6,6 +6,7 @@ import $ from 'jquery';
 
 function updateStats(tamagotchi){
   setInterval(() => {
+    $("#tamagotchi").html('<img src="img/' + tamagotchi.age + '.gif" alt="image of tamagotchi">');
     $("#food").text(tamagotchi.food);
     $("#attention").text(tamagotchi.attention);
     $("#rest").text(tamagotchi.rest);
@@ -14,7 +15,6 @@ function updateStats(tamagotchi){
 }
 
 $(document).ready(function() {
-  $("#tamagotchi").html('<img src="img/1.gif" alt="image of tamagotchi">');
   let tamagotchi = new Tamagotchi(100, 100, 100);
   tamagotchi.age();
   tamagotchi.hunger();
