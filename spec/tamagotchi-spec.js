@@ -49,8 +49,8 @@ describe('Tamagotchi', function() {
   });
 
   it('should set tamagotchi isAlive to false when food or rest level reach 0', function() {
-    jasmine.clock().tick(30001);
-    expect(tamagotchi.isAlive.toEqual(false);
+    jasmine.clock().tick(300001);
+    expect(tamagotchi.isAlive()).toEqual(false);
   });
 
 });
