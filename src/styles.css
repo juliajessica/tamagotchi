@@ -1,10 +1,23 @@
 img {
   width: 200px;
+  margin: 20px;
+  border: 2px solid black;
+}
+body {
+  padding-top: 70px;
 }
 
 .container {
-  background-color: pink;
+  background: linear-gradient(to right, #88a075, #cce8b4, #88a075);
   text-align: center;
-  width: 95%;
+  width: 30%;
+  padding-top: 15px;
+  padding-bottom: 10px;
   margin: 0 auto;
+  border-radius: 30%;
+  border: 2px solid black;
+}
+
+button {
+  margin: 10px 3px;
 }

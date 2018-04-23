@@ -26,6 +26,9 @@ function initialize(tamagotchi) {
   tamagotchi.hunger();
   tamagotchi.boredom();
   tamagotchi.fatigue();
+}
+
+function genButtons(tamagotchi) {
   $("#feed").click(function(){
     tamagotchi.feed();
   });
@@ -33,7 +36,16 @@ function initialize(tamagotchi) {
     tamagotchi.tickle();
   });
   $("#sleep").click(function(){
-    tamagotchi.sleep();
+    if (tamagotchi.sleep === true) {
+      tamagotchi.sleep = false;
+      $("#feed").show();
+      $("#tickle").show();
+    } else {
+      tamagotchi.sleep = true;
+      $("#feed").hide();
+      $("#tickle").hide();
+    }
+    // tamagotchi.sleep();
   });
 }
 
@@ -41,4 +53,5 @@ $(document).ready(function() {
   let tamagotchi = new Tamagotchi(100, 100, 100);
   initialize(tamagotchi);
   updateStats(tamagotchi);
+  genButtons(tamagotchi);
 });
