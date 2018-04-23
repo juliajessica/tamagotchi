@@ -23,6 +23,9 @@ class Tamagotchi {
     }, 6000);
   }
 
+  feed() {
+    this.food += 5;
+  }
 
 }//close class
 
