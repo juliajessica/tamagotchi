@@ -8,6 +8,7 @@ describe('Tamagotchi', function() {
     tamagotchi = new Tamagotchi(100, 100, 100);
     tamagotchi2 = new Tamagotchi(50, 50, 50);
     jasmine.clock().install();
+    tamagotchi.isAlive();
     tamagotchi.hunger();
     tamagotchi.boredom();
     tamagotchi.fatigue();

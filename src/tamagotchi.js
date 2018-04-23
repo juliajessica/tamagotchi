@@ -3,6 +3,17 @@ class Tamagotchi {
     this.food = food;
     this.attention = attention;
     this.rest = rest;
+    // this.isAlive = this.isAlive();
+  }
+
+  isAlive() {
+    setInterval(() => {
+      if (this.rest <= 0 || this.food <= 0) {
+        return false;
+      } else {
+        return true;
+      }
+    }, 1000);
   }
 
   hunger() {
