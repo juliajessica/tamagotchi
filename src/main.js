@@ -68,6 +68,7 @@ $(document).ready(function() {
       },
       success: function(response) {
         $('#giphy').empty();
+        // console.log(response);
         $('#giphy').append(`<img src="${response.data[12].images.downsized.url}" alt="giphy">`);
         $('#giphy').append(`<img src="${response.data[3].images.downsized.url}" alt="giphy">`);
         $('#giphy').append(`<img src="${response.data[4].images.downsized.url}" alt="giphy">`);
@@ -89,6 +90,7 @@ $(document).ready(function() {
       },
       success: function(response) {
         $('#weather-display').empty();
+        // console.log(response);
         $("#weather-display").append(`<iframe src="https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLEMAPSAPI_KEY}&q=${userSearchWeather}" allowfullscreen></iframe>`);
         $("#weather-display").append("<center><strong>City:</strong> " + response.name + "</br></center>");
         $("#weather-display").append("<center><strong>Humidity:</strong> " + response.main.humidity + "</br></center>");
