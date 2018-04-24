@@ -23,9 +23,9 @@ describe('Tamagotchi', function() {
     expect(tamagotchi.rest).toEqual(100);
   });
 
-  it('should decrease food level by 1 after 3001 milliseconds', function() {
+  it('should decrease food level by 2 after 3001 milliseconds', function() {
     jasmine.clock().tick(3001);
-    expect(tamagotchi.food).toEqual(99);
+    expect(tamagotchi.food).toEqual(98);
   });
 
   it('should decrease attention level by 2 after 3001 milliseconds', function() {
@@ -33,24 +33,22 @@ describe('Tamagotchi', function() {
     expect(tamagotchi.attention).toEqual(98);
   });
 
-  it('should decrease energy level by 1 after 6001 milliseconds', function() {
+  it('should decrease energy level by 2 after 6001 milliseconds', function() {
     jasmine.clock().tick(6001);
-    expect(tamagotchi.rest).toEqual(99);
+    expect(tamagotchi.rest).toEqual(98);
   });
 
-  it('should increase food level by 20 after feed, attention by 5 after tickle, rest by 15 after sleep', function() {
+  it('should increase food level by 20 after feed, attention by 5 after tickle', function() {
     tamagotchi2.feed();
     tamagotchi2.tickle();
-    tamagotchi2.sleep();
     expect(tamagotchi2.food).toEqual(57);
     expect(tamagotchi2.attention).toEqual(52);
-    expect(tamagotchi2.rest).toEqual(55);
   });
 
   it('should set tamagotchi isAlive to false when food or rest level reach 0', function() {
     jasmine.clock().tick(300001);
     tamagotchi.isAlive();
-    expect(tamagotchi.isAlive).toEqual(false);
+    expect(tamagotchi.status).toEqual(false);
   });
 
 });
