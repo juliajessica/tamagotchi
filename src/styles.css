@@ -21,3 +21,8 @@ body {
 button {
   margin: 10px 3px;
 }
+
+#giphy-search, #giphy {
+  margin-top: 20px;
+  text-align: center;
+}

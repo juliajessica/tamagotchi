@@ -54,4 +54,27 @@ $(document).ready(function() {
   initialize(tamagotchi);
   updateStats(tamagotchi);
   genButtons(tamagotchi);
+
+  // ajax search for gifs
+  $('#giphy-search').submit(function(event) {
+    event.preventDefault();
+    let userSearch = $('#keyword').val();
+
+    $.ajax({
+      url: `http://api.giphy.com/v1/gifs/search?q=${userSearch}&api_key=${process.env.API_KEY}`,
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        $('#giphy').empty();
+        $('#giphy').append(`<img src="${response.data[12].images.downsized.url}" alt="giphy">`);
+        $('#giphy').append(`<img src="${response.data[3].images.downsized.url}" alt="giphy">`);
+        $('#giphy').append(`<img src="${response.data[4].images.downsized.url}" alt="giphy">`);
+      },
+      error: function() {
+        $('#giphy').text("There was an error processing your request. Please try again.")
+      }
+    }); //closes ajax
+  });
 });
