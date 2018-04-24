@@ -7,7 +7,7 @@ body {
   padding-top: 70px;
 }
 
-.container {
+.tamagotchi-styling {
   background: linear-gradient(to right, #88a075, #cce8b4, #88a075);
   text-align: center;
   width: 30%;
@@ -24,5 +24,9 @@ button {
 
 #giphy-search, #giphy {
   margin-top: 20px;
-  text-align: center;
+  /*text-align: center;*/
+}
+
+#weather-search, #weather-display {
+  margin-top: 20px;
 }

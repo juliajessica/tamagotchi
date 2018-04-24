@@ -77,4 +77,30 @@ $(document).ready(function() {
       }
     }); //closes ajax
   });
+  // ajax search for weather
+  $('#weather-search').submit(function(event) {
+    event.preventDefault();
+    let userSearchWeather = $('#weather-input').val();
+
+    $.ajax({
+      url: `http://api.openweathermap.org/data/2.5/weather?zip=${userSearchWeather}&appid=${process.env.OTHERAPI_KEY}`,
+      type: 'GET',
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        $('#weather-display').empty();
+        $("#weather-display").append("<strong>City:</strong> " + response.name + "</br>");
+        $("#weather-display").append("<strong>Humidity:</strong> " + response.main.humidity + "</br>");
+        $("#weather-display").append("<strong>Daily High:</strong> " + response.main.temp_max + "</br>");
+        $("#weather-display").append("<strong>Daily Low:</strong> " + response.main.temp_min + "</br>");
+
+        console.log(response);
+
+      },
+      error: function() {
+        $('#weather-display').text("There was an error processing your request. Please try again.")
+      }
+    }); //closes ajax
+  });
 });

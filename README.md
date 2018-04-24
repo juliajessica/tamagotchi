@@ -19,6 +19,8 @@ Tomagatchi project to practice asynchronous code, Jasmine testing with clock and
 * To bundle and build project distribution folder, run npm run build
 * To view Jasmine tests, run npm test
 * To view project in development mode, run npm start
+* .env set API_KEY to personal Giphy API Key: https://developers.giphy.com/
+* .env set OTHERAPI_KEY to personal Weather API Key: https://openweathermap.org/
 
 ## Known Bugs
 
