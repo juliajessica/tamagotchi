@@ -6,23 +6,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="tamagotchi-styling">
-        <div id="tamagotchi"></div>
-        <div class="stats">
-          <h1>Tamagotchi</h1>
-          <h3>Food: <span id="food"></span></h3>
-          <h3>Attention: <span id="attention"></span></h3>
-          <h3>Rest: <span id="rest"></span></h3>
-          <h3>Age: <span id="age"></span></h3>
-        </div>
-        <div class="actions">
-          <button type="button" id="feed" class="btn btn-primary">Feed Me</button>
-          <button type="button" id="tickle" class="btn btn-info">Tickle Me</button>
-          <button type="button" id="sleep" class="btn btn-success">Sleep/Wake</button>
-        </div>
-      </div>
       <div class="row">
-        <div class="col-md-6 float-left">
+        <div class="col-lg-4">
           <div class="giphy-search">
             <form id="giphy-search">
               <input id="keyword" type="text" placeholder="Insert keyword search">
@@ -31,8 +16,25 @@
             <div id="giphy"></div>
           </div>
         </div>
-        <div class="weather-search">
-          <div class="col-md-6">
+        <div class="col-lg-4">
+          <div class="tamagotchi-styling">
+            <div id="tamagotchi"></div>
+            <div class="stats">
+              <h1>Tamagotchi</h1>
+              <h3>Food: <span id="food"></span></h3>
+              <h3>Attention: <span id="attention"></span></h3>
+              <h3>Rest: <span id="rest"></span></h3>
+              <h3>Age: <span id="age"></span></h3>
+            </div>
+            <div class="actions">
+              <button type="button" id="feed" class="btn btn-primary">Feed Me</button>
+              <button type="button" id="tickle" class="btn btn-info">Tickle Me</button></br>
+              <button type="button" id="sleep" class="btn btn-success">Sleep/Wake</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="weather-search">
             <form id="weather-search">
               <input id="weather-input" type="text" placeholder="Enter your zipcode">
               <button type="submit" class="btn btn-info">Check Weather</button>

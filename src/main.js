@@ -90,34 +90,14 @@ $(document).ready(function() {
       success: function(response) {
         $('#weather-display').empty();
         $("#weather-display").append(`<iframe src="https://www.google.com/maps/embed/v1/place?key=${process.env.GOOGLEMAPSAPI_KEY}&q=${userSearchWeather}" allowfullscreen></iframe>`);
-        $("#weather-display").append("<strong>City:</strong> " + response.name + "</br>");
-        $("#weather-display").append("<strong>Humidity:</strong> " + response.main.humidity + "</br>");
-        $("#weather-display").append("<strong>Daily High:</strong> " + response.main.temp_max + "</br>");
-        $("#weather-display").append("<strong>Daily Low:</strong> " + response.main.temp_min + "</br>");
+        $("#weather-display").append("<center><strong>City:</strong> " + response.name + "</br></center>");
+        $("#weather-display").append("<center><strong>Humidity:</strong> " + response.main.humidity + "</br></center>");
+        $("#weather-display").append("<center><strong>Daily High:</strong> " + response.main.temp_max + "</br></center>");
+        $("#weather-display").append("<center><strong>Daily Low:</strong> " + response.main.temp_min + "</br></center>");
       },
       error: function() {
         $('#weather-display').text("There was an error processing your request. Please try again.")
       }
     }); //closes ajax
-    // //ajax for googlemaps
-    // $.ajax({
-    //   url: `https://maps.googleapis.com/maps/api/geocode/json?address=${userSearchWeather}&key=${process.env.GOOGLEMAPSAPI_KEY}`,
-    //   type: 'GET',
-    //   data: {
-    //     format: 'json'
-    //   },
-    //   success: function(response) {
-    //     $('#map-display').empty();
-    //     console.log(response);
-    //     let apiAddress = response.results[0].formatted_address;
-    //     apiAddress = apiAddress.replace(" ", "+");
-    //     console.log(apiAddress);
-    //     $("#map-display").append(response.results[0].formatted_address);
-    //     $("#map-display").append(`<iframe src="https://www.google.com/maps/embed/v1/place?&q=${apiAddress}" allowfullscreen></iframe>`);
-    //   },
-    //   error: function() {
-    //     $('#weather-display').text("There was an error processing your request. Please try again.")
-    //   }
-    // }); //closes ajax
   });
 });

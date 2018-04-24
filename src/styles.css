@@ -3,6 +3,7 @@ img {
   margin: 20px;
   border: 2px solid black;
 }
+
 body {
   padding-top: 70px;
 }
@@ -10,7 +11,7 @@ body {
 .tamagotchi-styling {
   background: linear-gradient(to right, #88a075, #cce8b4, #88a075);
   text-align: center;
-  width: 30%;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 10px;
   margin: 0 auto;
@@ -32,7 +33,7 @@ button {
 }
 
 iframe {
-  width: 600px;
+  width: 400px;
   height: 450px;
   border: none;
 }
