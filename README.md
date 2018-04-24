@@ -21,6 +21,7 @@ Tomagatchi project to practice asynchronous code, Jasmine testing with clock and
 * To view project in development mode, run npm start
 * .env set API_KEY to personal Giphy API Key: https://developers.giphy.com/
 * .env set OTHERAPI_KEY to personal Weather API Key: https://openweathermap.org/
+* .env set GOOGLEMAPSAPI_KEY to personal Google Map API Key: https://developers.google.com/maps/documentation/embed/guide
 
 ## Known Bugs
 

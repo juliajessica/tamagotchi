@@ -30,3 +30,9 @@ button {
 #weather-search, #weather-display {
   margin-top: 20px;
 }
+
+iframe {
+  width: 600px;
+  height: 450px;
+  border: none;
+}
